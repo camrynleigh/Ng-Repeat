@@ -1,0 +1,14 @@
+header {
+    background-image: url("http://wallpapercave.com/wp/junYN7V.png");
+    padding-top: 200px;
+    height: 360px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+body {
+    background-color: gray;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+}

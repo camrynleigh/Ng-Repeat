@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="PlayerKillsApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ng-Repeat Application</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron:500' rel='stylesheet' type='text/css'>
+</head>
+
+<body ng-controller="MainController">
+    <header></header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <ul>
+                <li ng-repeat="kills in playerKills">
+                    <div class="col-md-3">Handle: {{kills.handle}}</div>
+                    <div class="col-md-3">Ranks: {{kills.rank}}</div>
+
+                    <div class="col-md-4">
+                        <h4>Clan Members</h4>
+                        <ul>
+                            <li ng-repeat="member in kills.clan">{{member}}</li>
+                        </ul>
+                    </div>
+
+        </div>
+        </li>
+        </ul>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <h3>Add New Player</h3>
+            <label>Handle</label>
+            <input ng-model="newPlayer.handle">
+            <label>Kills</label>
+            <input ng-model="newPlayer.rank">
+            <button ng-click="addPlayer"></button>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
